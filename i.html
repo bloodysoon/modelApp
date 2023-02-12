@@ -1,0 +1,48 @@
+
+    
+    <main>
+      
+    {#each Object.entries(models) as [model, modelName]}
+      <div class = 'xc'>
+        <div id="center"> {modelName} </div>
+    
+          <a onclick="clickCount({modelName})" href="{host}/src/girls/{modelName}.html"><img src="img/{modelName}.png" alt="{modelName}" 
+            width="{width}" 
+            height="{height}" /></a>
+      </div>
+    {/each}
+          
+    
+    </main>
+    <style>
+      main {
+        text-align: center;
+        padding: 1em;
+        margin: 0 auto;
+      }
+    
+      @media (min-width: 640px) {
+        main {
+          max-width: none;
+        }
+      }
+    
+    .xc{
+        display:inline-block;
+        width:400;
+        height:400;
+      padding: 5px;
+    }
+    
+    
+        #center {
+      width: 150px;
+      margin: auto;
+      text-align: center;
+    
+      /* Optional Styling */
+      padding: 10px;
+      background-color: #f6f3ed;
+        }
+    
+    </style>
